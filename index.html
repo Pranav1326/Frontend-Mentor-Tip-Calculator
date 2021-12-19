@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- External javascript file -->
+  <script src="./js/script.js" defer></script>
+  <!-- Google font links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="main" role="main">
+    <div class="title">
+      <img src="./images/logo.svg" alt="">
+    </div>
+
+    <div class="box">
+      <div class="bil-split-section">
+
+        <div class="bill-amount">
+          <span> Bill </span>   
+          <div class="textbox">
+            <img src="./images/icon-dollar.svg" alt="">
+            <input type="number" placeholder="0" name="bill-amount" >
+          </div>
+        </div>
+
+        <div class="tip-section">
+          <span class="select-tip"> Select Tip % </span>
+          <div class="tips">
+            <div class="five">
+              <span> 5% </span>
+            </div>
+            <div class="ten">
+              <span> 10% </span>
+            </div>
+            <div class="fifteen">
+              <span> 15% </span>
+            </div>
+            <div class="twentyfive">
+              <span> 25% </span>
+            </div>
+            <div class="fifty">
+              <span> 50% </span>
+            </div>
+            <div class="custom">
+              <input type="number" name="tip" id="tip" placeholder="Custom" >
+            </div>
+          </div>
+        </div>
+
+        <div class="no-of-people-section">
+          <span> Number of People </span>   
+          <span class="error"> Can't be zero </span>
+          <div class="textbox ">
+            <img src="./images/icon-person.svg" alt="">
+            <input type="number" placeholder="0" name="no-of-people">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tip-calculate-section">
+        <div class="tip-calculation">
+          <div class="tip-amount">
+            <div class="data-desc">
+              <span class="main-title">
+                Tip Amount
+              </span>
+              <span class="desc">
+                / person
+              </span>
+            </div>
+            <div class="amount" id="tip-amount">
+              $ 0.00
+            </div>
+          </div>
+          <div class="total">
+            <div class="data-desc">
+              <span class="main-title">
+                Total
+              </span>
+              <span class="desc">
+                / person
+              </span>
+            </div>
+            <div class="amount" id="total">
+              $ 0.00
+            </div>
+          </div>
+        </div>
+
+        <div class="reset-btn">
+          <button id="btn" type="reset"> Reset </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Pranav1326">Pranav</a>.
+  </div>
+</body>
+</html>
