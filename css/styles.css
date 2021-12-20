@@ -1,0 +1,354 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --bd: 1px solid #000;
+    --bdr5: 5px;
+    --bdr10: 10px;
+    --title-font: 0.9rem;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: hsl(185, 41%, 84%);
+}
+
+.main{
+    min-height: calc(100vh - 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: 'Space Mono', monospace;
+}
+
+.box{
+    min-width: 45rem;
+    min-height: 25rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 17px;
+    display: flex;
+    flex-direction: row;
+}
+
+.bil-split-section{
+    width: 100%;
+    min-height: 25rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bill-amount{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.bill-amount span{
+    font-size: var(--title-font);
+    font-weight: 700;
+    color: hsl(184, 14%, 43%);
+}
+
+.textbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.3rem 1rem;
+    border-radius: var(--bdr5);
+    background-color: hsl(189, 41%, 97%);
+}
+ 
+.textbox:hover{
+    outline: 2px solid hsla(172, 67%, 45%, 1);
+    cursor: pointer;
+}
+
+input{
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    margin: 0 0.7rem;
+    font-size: 24px;
+    color: hsl(184, 14%, 56%);
+    size-adjust: none;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+}
+
+input:hover{
+    cursor: pointer;
+}
+
+input::placeholder{
+    color: hsl(184, 14%, 56%);
+    font-weight: 700;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.select-tip{
+    color: hsl(186, 14%, 43%);
+    font-size: var(--title-font);
+    font-weight: 700;
+}
+
+.tips{
+    margin: 1rem 0;
+    display: grid;
+    grid-template-areas: 
+    'one two three'
+    'four five six';
+    gap: 0.7rem;
+}
+
+.five{
+    grid-area: one;
+}
+.ten{
+    grid-area: two;
+}
+.fifteen{
+    grid-area: three;
+}
+.tweltyfive{
+    grid-area: four;
+}
+.fifty{
+    grid-area: five;
+}
+.custom{
+    grid-area: six;
+}
+
+.tips div{
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    width: 5.5rem;
+    height: 2.1rem;
+    text-align: center;
+    border-radius: var(--bdr5);
+}
+
+.tips div:hover{
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 41%, 84%);
+    cursor: pointer;
+}
+
+.tips .active-class{
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    cursor: pointer;
+}
+
+.tips div:active{
+    background-color: hsl(172, 67%, 45%);
+}
+
+.tips div span{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.tips .custom{
+    background-color: hsl(189, 41%, 97%);
+}
+
+.tips .custom:hover{
+    background-color: hsl(189, 41%, 97%);
+    outline: 2px solid hsla(172, 67%, 45%, 1);
+    cursor: pointer;
+}
+
+#tip{
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 700;
+    padding: 0 0.2rem;
+    text-align: right;
+}
+
+#tip::placeholder{
+    margin-left: 0.2rem;
+}
+
+.no-of-people-section{
+    margin: 1rem 0;
+}
+
+.no-of-people-section span{
+    font-size: var(--title-font);
+    font-weight: 700;
+    color: hsl(184, 14%, 43%);
+}
+
+.no-of-people-section .error{
+    color: rgba(255, 0, 0, 0.6);
+    display: none;
+    margin-left: 1rem;
+}
+
+.no-of-people-section .active-error{
+    outline: 2px solid rgba(255, 0, 0, 0.6);
+}
+
+.tip-calculate-section{
+    height: 100%;
+    width: 100%;
+    background-color: hsl(183, 100%, 15%);
+    height: 21.3rem;
+    padding: 2rem;
+    margin: 1.7rem;
+    border-radius: var(--bdr10);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tip-calculation{
+    display: flex;
+    flex-direction: column;
+    min-height: 8rem;
+    justify-content: space-between;
+}
+
+.tip-amount,
+.total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.data-desc{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-title{
+    font-size: 0.9rem;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+
+.desc{
+    color: hsl(184, 14%, 56%);
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.amount{
+    font-size: 2.2rem;
+    color: hsla(172, 67%, 45%, 1);
+    font-weight: 700;
+}
+
+.reset-btn{
+    width: 100%;
+}
+
+#btn{
+    width: 100%;
+    min-height: 2.625rem;
+    font-size: 1.6rem;
+    font-family: 'Space Mono', monospace;
+    background-color: hsla(172, 67%, 45%, 0.2);
+    outline: none;
+    border: none;
+    border-radius: var(--bdr5);
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-variant-caps: all-petite-caps;
+    text-align: center;
+    cursor: pointer;
+}
+
+#btn:hover{
+    background-color: hsl(185, 41%, 84%);
+}
+
+#btn:active{
+    background-color: hsla(172, 67%, 45%, 1);
+}
+
+.attribution {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 11px; 
+    text-align: center; 
+    gap: 0.2rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+
+/* Media Queries */
+
+@media screen and ( max-width: 779px ){
+    .title{
+        margin-top: 3rem;
+    }
+    .box{
+        flex-direction: column;
+        min-width: auto;
+    }
+    .tip-calculate-section{
+        width: auto;
+    }
+    .tips div{
+        width: 7rem;
+        height: 2.2rem;
+    }
+}
+
+@media screen and ( max-width: 426px ){
+    .tips{
+        grid-template-areas: 
+        'one two'
+        'three four'
+        'five six';
+    }
+    .tips div{
+        width: 10rem;
+        height: 2.2rem;
+    }
+    .tip-calculate-section {
+        width: auto;
+        height: 16rem;
+    }
+    .bil-split-section {
+        width: 100%;
+        height: 30rem;
+        padding-bottom: 0;
+    }
+}
+
+@media screen and ( max-width: 376px ){
+    .tips div{
+        width: 9.5rem;
+        height: 2.2rem;
+    }
+    .tip-calculate-section {
+        width: auto;
+        height: 16rem;
+    }
+}
